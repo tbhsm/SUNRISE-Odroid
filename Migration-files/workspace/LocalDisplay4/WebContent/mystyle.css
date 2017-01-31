@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+<style>
+#header {
+    height: 200px;
+    width: 1000px;
+    z-index: 2;
+    color: #fff;
+}
+.background {
+    height: 200px;
+    width: 800px;
+    background: url('https://scontent-ams3-1.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/12047032_901600509919763_6134010887475170780_n.jpg?oh=ecf52e2abb75aaf7f32023e9a700316f&oe=56A52941') no-repeat;
+    background-size : cover;
+    position: relative;
+    opacity : 0.8;
+    z-index: 1;
+}
+#nav {
+    line-height:20px;
+    background-color:#eeeeee;
+    height:800px;
+    width:80px;
+    float:left;
+    padding:5px;
+}
+#section {
+    width:300px;
+    float:left;
+    padding:10px;
+}
+#section2 {
+    width:300px;
+    float:left;
+    padding:10px;
+}
+#section3 {
+    width:300px;
+    float:left;
+    padding:10px;
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+</style>

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1466513554 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/led_pwm/main.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<wiringPi.h>
+

@@ -1,0 +1,7 @@
+Compiling manual:
+
+-Compile using quick build ->you might get an error about some missing \item
+-Compile again using quick build ->same error is likely to persist
+-Compile using bibtex ->should give no errors
+-Compile using quick build ->probably no errors
+-Compile a last time using quick build ->now everything should be fine ;)

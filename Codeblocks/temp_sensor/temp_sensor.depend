@@ -1,0 +1,366 @@
+# depslib dependency file v1.0
+1462904977 source:/home/jobvanstaveren/Desktop/Odroid_Workspace/temp_sensor/GPIOs.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+
+1462904977 source:/home/jobvanstaveren/Desktop/Odroid_Workspace/temp_sensor/readDatabase.c
+
+1462904977 source:/home/jobvanstaveren/Desktop/Odroid_Workspace/temp_sensor/ScaleTables.c
+	"ScaleTables.h"
+
+1462904977 /home/jobvanstaveren/Desktop/Odroid_Workspace/temp_sensor/ScaleTables.h
+
+1462995134 source:/home/jobvanstaveren/Desktop/Odroid_Workspace/temp_sensor/ServerCom.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	<curl/curl.h>
+	<sys/syscall.h>
+	<fcntl.h>
+
+1462904977 source:/home/jobvanstaveren/Desktop/Odroid_Workspace/temp_sensor/Victron.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	"ScaleTables.h"
+
+1462995475 source:/home/jobvanstaveren/Desktop/Odroid_Workspace/temp_sensor/Weather.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	"Weather.h"
+	"ScaleTables.h"
+
+1462904977 /home/jobvanstaveren/Desktop/Odroid_Workspace/temp_sensor/Weather.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+
+1462995038 source:/home/jobvanstaveren/Desktop/Odroid_Workspace/temp_sensor/Display.c
+	<stdio.h>
+	<stdlib.h>
+	"Weather.h"
+	"ServerCom.h"
+
+1462904977 /home/jobvanstaveren/Desktop/Odroid_Workspace/temp_sensor/ServerCom.h
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	<curl/curl.h>
+	<fcntl.h>
+
+1462996598 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/BicycleShed.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<modbus.h>
+	<stdint.h>
+	<curl/curl.h>
+	<fcntl.h>
+	<pthread.h>
+	<time.h>
+	<sys/syscall.h>
+	"readDatabase.h"
+	"Victron.h"
+	"Weather.h"
+	"Display.h"
+	"ServerCom.h"
+	"GPIOs.h"
+
+1462904977 /home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/readDatabase.h
+	<mysql.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+
+1462904977 /home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/Victron.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<modbus.h>
+
+1462904977 /home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/Weather.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+
+1462904977 /home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/Display.h
+	<stdio.h>
+
+1462904977 /home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/ServerCom.h
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	<curl/curl.h>
+	<fcntl.h>
+
+1462904977 /home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/GPIOs.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+
+1462995038 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/Display.c
+	<stdio.h>
+	<stdlib.h>
+	"Weather.h"
+	"ServerCom.h"
+
+1462996625 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/GPIOs.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+
+1462904977 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/readDatabase.c
+
+1462904977 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/ScaleTables.c
+	"ScaleTables.h"
+
+1462904977 /home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/ScaleTables.h
+
+1462995134 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/ServerCom.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	<curl/curl.h>
+	<sys/syscall.h>
+	<fcntl.h>
+
+1462904977 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/Victron.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	"ScaleTables.h"
+
+1462995475 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/temp_sensor/Weather.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	"Weather.h"
+	"ScaleTables.h"
+
+1463038703 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/Display.c
+	<stdio.h>
+	<stdlib.h>
+	"Weather.h"
+	"ServerCom.h"
+
+1463749659 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/Weather.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+
+1463065422 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/ServerCom.h
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<stdint.h>
+	<fcntl.h>
+
+1463038703 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/GPIOs.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+
+1463038703 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/readDatabase.c
+
+1463038703 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/ScaleTables.c
+	"ScaleTables.h"
+
+1463038703 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/ScaleTables.h
+
+1463750559 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/ServerCom.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<stdint.h>
+	<sys/syscall.h>
+	<fcntl.h>
+	"ServerCom.h"
+	"lib-json.h"
+
+1463038703 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/Victron.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	"ScaleTables.h"
+
+1463750166 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/Weather.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	"Weather.h"
+	"ScaleTables.h"
+
+1463750645 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/BicycleShed.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<modbus.h>
+	<stdint.h>
+	<curl/curl.h>
+	<fcntl.h>
+	<pthread.h>
+	<time.h>
+	<sys/syscall.h>
+	"readDatabase.h"
+	"Victron.h"
+	"Weather.h"
+	"Display.h"
+	"ServerCom.h"
+	"GPIOs.h"
+
+1463038703 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/readDatabase.h
+	<mysql.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+
+1463038703 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/Victron.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<modbus.h>
+
+1463038703 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/Display.h
+	<stdio.h>
+
+1463038703 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/GPIOs.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+
+1463066920 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/lib-json.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<netdb.h>
+	"lib-json.h"
+
+1463065438 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/temp_sensor/lib-json.h
+	<stdint.h>
+

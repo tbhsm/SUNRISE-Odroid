@@ -1,0 +1,38 @@
+\section{Programme of requirements}\label{sec:requirements}
+In the high-level user and admin interface, status information about the chargers and power electronics is needed, as well as general information about the weather. To obtain this information, the ODROID must read this data from the corresponding components in the system. 
+This data is then sent to the server from which it is eventually displayed in the user/admin interface. Another main task of the ODROID is to turn the chargers for the electric vehicles on and off. Finally, there is an external display placed in the charging station which shows some general information about the weather, as well as availability of charging points.
+
+\subsection{Functional Requirements}
+%Volgens handleiding moet PoR genummerd worden
+
+Functional requirements determine what the design must be able to do and which functionalities it must have. Based on the problem definition the following functional requirements are determined.\\
+The design must be able to:
+\begin{itemize} 
+\item[\namedlabel{eis:1.1}{[1.1]}] Read the data from the weather station.
+\item[\namedlabel{eis:1.2}{[1.2]}] Read the data from the Victron power electronics system.
+\item[\namedlabel{eis:1.3}{[1.3]}] Read the temperatures from the temperature probes.
+\item[\namedlabel{eis:1.4}{[1.4]}] Control the local display at the e-bike charging station.
+\item[\namedlabel{eis:1.5}{[1.5]}] Show general information about weather and availability of the charging points.
+\item[\namedlabel{eis:1.6}{[1.6]}] Turn the chargers on and off based on server and sensor information.
+\end{itemize}
+
+\subsection{System requirements}
+Requirements that are not functional but are important for the utilisation are the system requirements \cite{baphandleiding}. In this case these requirements merely put constraints on the software and ODROID once they are installed in the e-bike charging station.\\
+The system must:
+\begin{itemize}
+\item[\namedlabel{eis:2.1}{[2.1]}] Be accessible via a remote desktop.
+\item[\namedlabel{eis:2.2}{[2.2]}] Be able to recover itself after a power or internet failure.
+\item[\namedlabel{eis:2.3}{[2.3]}] Run the software 24 hours a day, 7 days a week.
+\end{itemize}
+
+
+\subsection{General Conditions}
+The general conditions are determined by the framework in which this project is carried out. Other general condition are a result of constraints from the components used for this project. The general conditions are:
+\begin{itemize}
+\item[\namedlabel{eis:3.1}{[3.1]}] The system has to be controlled by a minicomputer (i.e. Raspberry Pi or ODROID).
+\item[\namedlabel{eis:3.2}{[3.2]}] Connected devices are bound to a maximum polling rate.
+\item[\namedlabel{eis:3.3}{[3.3]}] The sofware for the mini computer has to be written in C.
+\item[\namedlabel{eis:3.4}{[3.4]}] The charging station can facilitate four e-bikes, one electric scooter and one electric vehicle that can be charged wirelessly.
+\end{itemize}
+
+% Hier moet misschien nog een mooi verhaaltje achter

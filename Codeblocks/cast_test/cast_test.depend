@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1463061792 source:/home/jobvanstaveren/Desktop/cast_project/cast_test/ScaleTables.c
+	"ScaleTables.h"
+
+1463061792 /home/jobvanstaveren/Desktop/cast_project/cast_test/ScaleTables.h
+
+1463064841 source:/home/jobvanstaveren/Desktop/cast_project/cast_test/main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<string.h>
+	"ScaleTables.h"
+
+1463774953 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/cast_test/main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<string.h>
+	"ScaleTables.h"
+
+1463083620 /home/jobvanstaveren/Documents/odroid/Codeblocks/cast_test/ScaleTables.h
+
+1463083620 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/cast_test/ScaleTables.c
+	"ScaleTables.h"
+

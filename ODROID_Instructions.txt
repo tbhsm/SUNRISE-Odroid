@@ -1,0 +1,169 @@
+==== Setting up the ODROID ====
+
+1. Update kernel and resize SDCard/eMMC through ODROID utilities
+
+2. Update all files using the commands:
+	sudo apt-get update
+	sudo apt-get upgrade
+	sudo apt-get dist-upgrade
+
+3. Install some packages with the following command line: 
+
+sudo apt-get install libjpeg-dev libpng12-dev libx11-dev libglu1-mesa-dev subversion build-essential autoconf automake make libtool xorg-dev xutils-dev libdrm-dev libdri2-1 libdri2-dev git libglew-dev
+
+4. Open Chromium and go to chrome://flags. Enable 'Override software rendering list'.
+
+5. Go to /home/odroid/.local/share/applications and open properties of Chromium. Change command in Desktop Entry to 'chromium-browser --use-gl/egl' (this enables use of WebGL).
+
+6. Download modbus package at libmodbus.org. Extract downloaded tarball and cd to the directory. Type the following commands within the map that was extracted:
+
+	./config
+	make
+	make install
+
+libmodbus should now be installed.
+
+7. Install WiringPi by cloning the wiringPi git. This can be done by using these commands in the directory you want it to be installed:
+
+	git clone https://github.com/hardkernel/wiringpi
+	cd wiringpi
+	./build
+
+8.1. (optional) Install 'Code::Blocks IDE' by running the following command: 
+
+	sudo apt-get install codeblocks
+
+8.2. (optional) In Code::Blocks IDE, go to Settings>Compiler... and change the following settings:
+	
+	Linker settings->Link libraries
+		wiringPi; wiringPiDev; pthread; :libmodbus.so.5
+
+	Search directories->Compiler
+		/usr/include/; /usr/lib; /usr/local/lib; 				/usr/local/include/modbus
+
+	Search directories->Linker
+		/usr/local/lib; /usr/lib; /usr/local/lib/pkgconfig; 		/usr/local/include/modbus
+
+9. Install Unclutter using the command:
+
+	sudo apt-get install unclutter
+
+This will be used to hide the mouse after 5 seconds of inactivity.
+
+10.1. Install Upstart using the command:
+	
+	sudo apt-get install upstart
+
+This will be used to start certain programs when booting.
+
+10.2. Place the .conf files (browser_boot.conf, hide_mouse.conf, xvnc_killer.conf and ODROID_booter.conf) in the upstart map found in /home/odroid/.config. Make sure that hide_mouse.conf, xvnc_killer.conf and ODROID_booter.conf are looking in the correct directory (you can check by editing the file).
+
+11.1. edit the sudoers file using the following command:
+
+	sudo visudo
+
+11.2. Add the default user as SuperUser by adding the following line to the end of this file:
+
+	%odroid ALL=(ALL:ALL) ALL
+
+This is needed to automatically boot the C-code on startup (after e.g. powercut) Note that you need to reboot for this change to become effective.
+
+==== Setting up a VPN with the router ====
+
+To setup a VPN connection with the router attached to the ODROID, follow these instructions (note: this should be done on the remote pc, not the ODROID!): 
+
+1. Install OpenVPN: https://openvpn.net/index.php/download/community-downloads.html
+
+2. Login on the router and download the files found in Advanced > VPN-service.
+
+3. Place the files in the config map of OpenVPN. By default, this can be found in C:\Program Files\OpenVPN\config.
+
+4. Open 'client.ovpn' in notepad, and change the contents to the following:
+
+client
+dev tap
+proto udp
+dev-node NETGEAR-VPN
+remote 145.94.62.199 12974
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+ca ca.crt
+cert client.crt
+key client.key
+cipher AES-128-CBC
+comp-lzo
+verb 5
+
+NOTE: the IP address in the 5th line should correspond to the IP address of the router.
+
+==== Setup remote desktop ==== 
+
+To setup the ODROID to handle remote desktops, follow these instructions:
+
+Step 1 ñ Install xRDP
+
+Open Terminal (Crtl+Alt+T) and execute following commands :
+
+sudo apt-get update
+sudo apt-get install xrdp
+sudo apt-get install vnc4server
+
+Step 2 ñ Install XFCE4 (Unity doesnt seem to support xRDP in Ubuntu 14.04 although in Ubuntu 12.04 it was supported thats why we install XFCE4)
+
+sudo apt-get install xfce4
+
+Step 3 ñ Configure xRDP
+
+In this step we modify 2 files to make sure xRDP uses xfce4. First we need to create or edit our .xsession file in our home directory. We can either use nano or simply redirect an echo statement (easier):
+
+echo xfce4-session >~/.xsession
+
+The second file we need to edit is the startup file for xRDP, so it will start xfce4.
+
+sudo nano /etc/xrdp/startwm.sh
+
+The content should look like this (pay attention to the last line and ignore . /etc/X11/Xsession):
+
+#!/bin/sh
+
+if [ -r /etc/default/locale ]; then
+  . /etc/default/locale
+  export LANG LANGUAGE
+fi
+
+startxfce4
+
+Step 4 ñ Restart xRDP
+
+To make all these changes effective, restart xRDP as such:
+
+sudo service xrdp restart
+
+Step 5 - Connecting to the ODROID
+
+Use the "Remote Desktop Connection" built in Windows (or any other remote desktop client) and use the local IP of the ODROID when connected to the router (through VPN or wired). You can find this IP by typing the command 'ifconfig'. The IP adress will have a format looking like this: 192.168.1.xx. To login, simply use the login settings of the ODROID.
+
+=== Enabling dynamic USB allocation ===
+(credits to Michael Ludvig: http://hintshop.ludvig.co.nz/show/persistent-names-usb-serial-devices/)
+The ODROID assigns USB connections statically by default, meaning that the first USB that is plugged in gets the address '/dev/ttyUSB0' and the second gets '/dev/ttyUSB1'. To make the ODROID independent of the order that USBs are plugged in, the following instructions can be followed:
+
+1. Execute the following commands in the terminal (make sure the weather station and ADAM 4015 module are connected):
+
+	udevadm info -a -n /dev/ttyUSB0 | grep '{serial}' | head -n1
+	udevadm info -a -n /dev/ttyUSB0 | grep '{idVendor}' | head -n1
+	udevadm info -a -n /dev/ttyUSB0 | grep '{idProduct}' | head -n1
+
+Write the returned values down, these values correspond to the first Modbus device that was plugged in.
+
+2. Do the same for /dev/ttyUSB1. Write the returned values down, these values correspond to the second Modbus device that was plugged in.
+
+3. browse to /etc/udev/rules.d and add a file named "99-usb-serial.rules" (if not already present). Add the following lines in this file:
+
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="FTXRI8JV", SYMLINK+="ttyUSBt”
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", ATTRS{serial}=="FTVXKY8C", SYMLINK+="ttyUSBw”
+
+Note: the name chosen for the symbolic link (ttyUSBt and ttyUSBw in this case) must be no longer than 16 characters (16 bytes).
+
+Make sure that the earlier found values correspond to the values in this file (the values in the lines above correspond to the first setup, but might change in later versions).

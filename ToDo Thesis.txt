@@ -1,0 +1,23 @@
+- Eigen input (n.a.v. vraag Ioan)
+- Referentie naar code en document van Pavel
+	- Gekozen om geen threads te gebruiken
+	- Code bijna volledig herschreven (alleen modbus sequence is gebleven: zoeken waar dit vandaan komt!!)
+
+DONE:
+- Automatische startup programma's (incl. README & code)
+- Casten/scalen (cast diagram plaatje + uitleg met bijvoorbeeld een voorbeeld in bits)
+- User manual
+	- VPN opstarten
+	- niet tegelijk uitlezen temp. probes
+- Hotswap van temperatuursensoren (detecteren d.m.v. MAX_INT)
+- Offset bij Victron registers toelichten
+- Robuustheid (return 0 voor Victron & weerstation, geen sleep voor <0, free(..), modularity, etc.)
+- VPN (incl. config file aanpassen [het toevoegen van het IP] en xnvc_killer.sh)
+- Modbus RTU kan niet parallel worden uitgelezen (temperatuursensoren en weerstation)
+- DeviceID == SlaveID (zie Victron CCGX)
+- Hoe de temperatuursensoren waren aangesloten, codering van ADAM (detectie van aangesloten/aangesloten)
+- Referentie naar max. polling rate weerstation (10 sec, blz 119 weerstation)
+- Vermogens van Victron (twee MultiPlus systemen: 80W/50W en 8W/2W & DC vermogen)
+- Flexibel voor latere aanpassingen (duidelijke naamgeving variabelen/functies, andere registers opvraagbaar, veel comments, etc.)
+- Elektronica voor testen van de GPIO's
+

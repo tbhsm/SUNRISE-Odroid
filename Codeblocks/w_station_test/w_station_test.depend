@@ -1,0 +1,148 @@
+# depslib dependency file v1.0
+1463659737 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/Display.c
+	<stdio.h>
+	<stdlib.h>
+	"Weather.h"
+	"ServerCom.h"
+
+1463479351 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/Weather.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+
+1463065422 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/ServerCom.h
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<stdint.h>
+	<fcntl.h>
+
+1463495994 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/GPIOs.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+
+1462978514 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/readDatabase.c
+
+1463061474 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/ScaleTables.c
+	"ScaleTables.h"
+
+1463061474 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/ScaleTables.h
+
+1463652233 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/ServerCom.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<stdint.h>
+	<sys/syscall.h>
+	<fcntl.h>
+	"ServerCom.h"
+	"lib-json.h"
+
+1462978514 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/Victron.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	"ScaleTables.h"
+
+1463660144 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/Weather.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	"Weather.h"
+	"ScaleTables.h"
+
+1463494071 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/BicycleShed.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<modbus.h>
+	<stdint.h>
+	<curl/curl.h>
+	<fcntl.h>
+	<pthread.h>
+	<time.h>
+	<sys/syscall.h>
+	"readDatabase.h"
+	"Victron.h"
+	"Weather.h"
+	"Display.h"
+	"ServerCom.h"
+	"GPIOs.h"
+
+1462978514 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/readDatabase.h
+	<mysql.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+
+1462978514 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/Victron.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<modbus.h>
+
+1462978514 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/Display.h
+	<stdio.h>
+
+1462978514 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/GPIOs.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+
+1463065438 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/lib-json.h
+	<stdint.h>
+
+1463660790 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/w_station_test/lib-json.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<netdb.h>
+	"lib-json.h"
+

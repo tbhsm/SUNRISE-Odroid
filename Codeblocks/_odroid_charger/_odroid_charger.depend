@@ -1,0 +1,295 @@
+# depslib dependency file v1.0
+1464789697 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/Display.c
+	<stdio.h>
+	<stdlib.h>
+	"Weather.h"
+	"ServerCom.h"
+
+1464783754 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/Weather.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+
+1464783754 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/ServerCom.h
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<stdint.h>
+	<fcntl.h>
+
+1464786684 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/GPIOs.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+
+1464783754 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/lib-json.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<netdb.h>
+	"lib-json.h"
+
+1464783754 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/lib-json.h
+	<stdint.h>
+
+1464783754 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/readDatabase.c
+
+1464783754 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/ScaleTables.c
+	"ScaleTables.h"
+
+1464783754 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/ScaleTables.h
+
+1464783754 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/ServerCom.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<stdint.h>
+	<sys/syscall.h>
+	<fcntl.h>
+	"ServerCom.h"
+	"lib-json.h"
+
+1464783754 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/Victron.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	"ScaleTables.h"
+	"Victron.h"
+
+1464783754 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/Victron.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<modbus.h>
+
+1464783754 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/Weather.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	"Weather.h"
+	"ScaleTables.h"
+
+1464787928 source:/home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/BicycleShed.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<modbus.h>
+	<stdint.h>
+	<fcntl.h>
+	<pthread.h>
+	<time.h>
+	<sys/syscall.h>
+	"readDatabase.h"
+	"Victron.h"
+	"Weather.h"
+	"Display.h"
+	"ServerCom.h"
+	"GPIOs.h"
+
+1464786684 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/readDatabase.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+
+1464783754 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/Display.h
+	<stdio.h>
+
+1464783754 /home/odroid/Documents/SUNRISE-Odroid/Codeblocks/_odroid_charger/GPIOs.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+
+1464783517 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/BicycleShed.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<modbus.h>
+	<stdint.h>
+	<curl/curl.h>
+	<fcntl.h>
+	<pthread.h>
+	<time.h>
+	<sys/syscall.h>
+	"readDatabase.h"
+	"Victron.h"
+	"Weather.h"
+	"Display.h"
+	"ServerCom.h"
+	"GPIOs.h"
+
+1464335043 /home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/readDatabase.h
+	<mysql.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+
+1464335043 /home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/Victron.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<modbus.h>
+
+1464335043 /home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/Weather.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+
+1464335043 /home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/Display.h
+	<stdio.h>
+
+1464335043 /home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/ServerCom.h
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<stdint.h>
+	<fcntl.h>
+
+1464335043 /home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/GPIOs.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+
+1464335043 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/Display.c
+	<stdio.h>
+	<stdlib.h>
+	"Weather.h"
+	"ServerCom.h"
+
+1464783404 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/GPIOs.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+
+1464335043 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/lib-json.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<netdb.h>
+	"lib-json.h"
+
+1464335043 /home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/lib-json.h
+	<stdint.h>
+
+1464335043 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/readDatabase.c
+
+1464335043 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/ScaleTables.c
+	"ScaleTables.h"
+
+1464335043 /home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/ScaleTables.h
+
+1464335043 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/ServerCom.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<stdint.h>
+	<sys/syscall.h>
+	<fcntl.h>
+	"ServerCom.h"
+	"lib-json.h"
+
+1464335043 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/Victron.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	"ScaleTables.h"
+	"Victron.h"
+
+1464335043 source:/home/jobvanstaveren/Documents/odroid/Codeblocks/_odroid_charger/Weather.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	"Weather.h"
+	"ScaleTables.h"
+

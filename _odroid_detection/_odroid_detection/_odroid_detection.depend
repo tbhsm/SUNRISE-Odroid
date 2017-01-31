@@ -1,0 +1,294 @@
+# depslib dependency file v1.0
+1465372908 source:/home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/BicycleShed.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<modbus.h>
+	<stdint.h>
+	<fcntl.h>
+	<pthread.h>
+	<time.h>
+	<sys/syscall.h>
+	"BicycleShed.h"
+	"readDatabase.h"
+	"Victron.h"
+	"Weather.h"
+	"Display.h"
+	"ServerCom.h"
+	"GPIOs.h"
+
+1465373024 /home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/BicycleShed.h
+
+1464794142 /home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/readDatabase.h
+
+1465372412 /home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/Victron.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<modbus.h>
+
+1465292127 /home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/Weather.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+
+1465288316 /home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/Display.h
+	<stdio.h>
+
+1465372412 /home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/ServerCom.h
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<stdint.h>
+	<fcntl.h>
+
+1465287677 /home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/GPIOs.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+	"ServerCom.h"
+
+1465552837 source:/home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/Display.c
+	<stdio.h>
+	<stdlib.h>
+	"Weather.h"
+	"ServerCom.h"
+	"BicycleShed.h"
+
+1465372412 source:/home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/lib-json.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<netdb.h>
+	"lib-json.h"
+
+1465287677 /home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/lib-json.h
+	<stdint.h>
+
+1463756674 source:/home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/readDatabase.c
+
+1465372412 source:/home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/ScaleTables.c
+	"ScaleTables.h"
+
+1464335043 /home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/ScaleTables.h
+
+1465552837 source:/home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/ServerCom.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<time.h>
+	<stdint.h>
+	<sys/syscall.h>
+	<fcntl.h>
+	"ServerCom.h"
+	"lib-json.h"
+
+1465372412 source:/home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/Victron.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	"ScaleTables.h"
+	"Victron.h"
+	"BicycleShed.h"
+
+1465372412 source:/home/jobvanstaveren/Documents/odroid/_odroid_detection/_odroid_detection/Weather.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	<math.h>
+	"Weather.h"
+	"ScaleTables.h"
+	"BicycleShed.h"
+
+1465982200 source:/home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/Display.c
+	<stdio.h>
+	<stdlib.h>
+	"Weather.h"
+	"ServerCom.h"
+	"BicycleShed.h"
+
+1466073685 /home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/Weather.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+
+1465823422 /home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/ServerCom.h
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<stdint.h>
+	<fcntl.h>
+
+1466073685 /home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/BicycleShed.h
+
+1465984500 source:/home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/GPIOs.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+	"ServerCom.h"
+
+1465985182 source:/home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/lib-json.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<netdb.h>
+	"lib-json.h"
+
+1465985182 /home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/lib-json.h
+	<stdint.h>
+
+1465823422 source:/home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/readDatabase.c
+
+1465982200 source:/home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/ScaleTables.c
+	"ScaleTables.h"
+
+1465823422 /home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/ScaleTables.h
+
+1465985182 source:/home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/ServerCom.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<time.h>
+	<stdint.h>
+	<sys/syscall.h>
+	<fcntl.h>
+	"ServerCom.h"
+	"lib-json.h"
+
+1466073223 source:/home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/Victron.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	"ScaleTables.h"
+	"Victron.h"
+	"BicycleShed.h"
+
+1466073685 /home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/Victron.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<modbus.h>
+
+1466165891 source:/home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/Weather.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	</usr/local/include/modbus/modbus.h>
+	<stdint.h>
+	<math.h>
+	"Weather.h"
+	"ScaleTables.h"
+	"BicycleShed.h"
+
+1466167396 source:/home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/BicycleShed.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<errno.h>
+	<inttypes.h>
+	<modbus.h>
+	<stdint.h>
+	<fcntl.h>
+	<pthread.h>
+	<time.h>
+	<sys/syscall.h>
+	"BicycleShed.h"
+	"readDatabase.h"
+	"Victron.h"
+	"Weather.h"
+	"Display.h"
+	"ServerCom.h"
+	"GPIOs.h"
+
+1465823422 /home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/readDatabase.h
+
+1466073685 /home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/Display.h
+	<stdio.h>
+
+1466073685 /home/odroid/Documents/SUNRISE-Odroid/_odroid_detection/_odroid_detection/GPIOs.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+	"ServerCom.h"
+

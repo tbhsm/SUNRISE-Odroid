@@ -1,0 +1,75 @@
+\subsection{Solar panel temperature sensors}\label{sec:temp_sensors}
+There are four SFCS50-3-3-TB-5 temperature sensors \cite{temp_probe_datasheet} connected to the system to log temperatures of the solar panels \ref{eis:1.3}. The sensors are connected to an ADAM-4015 Data Aquisition Module \cite{adam_datasheet}, which is connected to an adapter that converts the Modbus RTU to USB so that it can be connected to the ODROID (See \Cref{fig:temperature_sensors_connection}).
+
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=0.6\textwidth]{images/ODROID_temperature_sensors.pdf}
+      \caption{The connection of the weather station}\label{fig:temperature_sensors_connection}
+\end{figure}
+
+\subsubsection{Casting and scaling of temperature values}
+Temperatures received from the ADAM-4015 module are encoded as a \verb|uint16_t|, but it was unknown how the module was programmed so it was yet to be determined what this value represents. To overcome this issue, The ``AdamApax .NET Utility'' \cite{AdamApax} was installed to investigate the settings that the module was operating at. The settings that were found can be seen in \Cref{fig:ADAM_-50-150}.\\
+
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=0.75\textwidth]{images/ADAM_-50-150.png}
+      \caption{Settings of the ADAM-4015 Data Aquisition Module. Input range (top) shows the temperature range of -50\degree C to 150\degree C. The fourth connection shows the value that is used (23823), other sensors are not connected.}\label{fig:ADAM_-50-150}
+\end{figure}
+
+It was likely that the \verb|uint16_t| values could be cast to \verb|int|, and then be scaled between -50\degree C and 150\degree C. This would result in a temperature of $\frac{23823}{2^{16}-1} \cdot 200-50 = 22.70$\degree C. To confirm this, the settings were changed to output between -200\degree C and 200\degree C. The results can be found in \Cref{fig:ADAM_-200-200}.\\
+
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=0.75\textwidth]{images/ADAM_-200-200.png}
+      \caption{Alternative settings of the ADAM-4015 Data Aquisition Module. Input range (top) shows the temperature range of -200\degree C to 200\degree C. The fourth connection shows the value that is used (36491), other sensors are not connected.}\label{fig:ADAM_-200-200}
+\end{figure}
+
+This capture was done close after the image in \Cref{fig:ADAM_-50-150} and results in a temperature of $\frac{36491}{2^{16}-1} \cdot 400-200 = 22.73$\degree C, which is similar enough to the previous calculation to conclude that this calculation is indeed correct.\\
+
+The temperature values are therefore cast using the function found in Script \ref{castTempData}, after which they are scaled using the loop found in Script \ref{scaleTempData}.
+
+\scriptsize
+\begin{lstlisting}[language=C,caption={Function used to cast temperature data},label={castTempData}]
+double* CastTempData(uint16_t *temperatures){
+
+    //Cast the uint16_t array with temperatures to double
+    double *double_temperatures;
+    double_temperatures = (double *) calloc(NB_SENSORS, sizeof(double));
+
+    int i;
+    for(i = 0; i < NB_SENSORS; i++){
+        double_temperatures[i] =(double)((int)((int16_t)temperatures[i]));
+    }
+
+    return double_temperatures;
+}
+\end{lstlisting}
+\normalsize
+
+\scriptsize
+\begin{lstlisting}[language=C,caption={Function used to scale temperature data},label={scaleTempData}]
+for(i = 0; i < NB_SENSORS; i++){
+    double tmp = cast_temperatures[i]/65535*200-50; //scale linearly between -50 and 150 degrees
+    scaled_temperatures[i] = roundf(tmp*100)/100; //round on two decimals
+}
+\end{lstlisting}
+\normalsize
+
+\subsubsection{Hotswap}
+Due to the fact that the ADAM module gives values for ports that are available but not connected (65535) it is possible to implement a hotswap functionality to the temperature sensors. This means that it is possible to remove or add temperature sensors while the system is operational. The value of 65535 corresponds to 150\degree C and is not considered a realistic value for solar panel temperatures. This value will be sent to the server but will not be logged. It will be discarded instead. Whenever a sensor is added, however, this value will change and the server will know that a temperature sensor was added. Similarly, it will know when a sensor was disconnected by checking if the temperature value equals 150\degree C.
+
+\subsubsection{Robustness}
+A couple of checks are done in \verb|readTemperatureSensors| to ensure that the system can run 24/7 \ref{eis:2.3}. This is done by returning zero whenever a check fails (for example, a failed connection). The function that handles the data (see Script \ref{sec:code_overview}) will then check if a zero was returned. Whenever this happens, it will bypass updating the local display and the sending of data to the server.\\
+
+The function will first check if a connection can be established to the ADAM module, this is done similar to the check in \verb|readWeatherStation| (see Script \ref{check_modbus_connection}). After reading the registers containing the temperature data, the function will check if all registers were read using the code found in Script \ref{check_temp_data_size}.
+
+\scriptsize
+\begin{lstlisting}[language=C,caption={Checking if the received data corresponds to the amount of requested registers},label={check_temp_data_size}]
+if(rc!=NB_SENSORS){
+	printf("FAILED (rc=%d) \n",rc);
+	modbus_close(ctx);
+	modbus_free(ctx);
+	return 0;
+}
+\end{lstlisting}
+\normalsize

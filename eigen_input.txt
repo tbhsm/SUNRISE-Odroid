@@ -1,0 +1,4 @@
+-FSM voor aansturing chargers
+-FSM voor de bewegingssensor (en de bewegingssensor zelf)
+-Concept voor de aansturing van de lokale website
+-Geschikt maken voor latere aanpassingen(flexibiliteit, handleiding, generiek gemaakte functies, scaletables voor alle registerwaarden)

@@ -1,0 +1,14 @@
+Read Port:
+// bike connection readback is connected to GPIO0 => mapped to port 97
+#sudo su
+
+#echo 97 > /sys/class/gpio/export
+#echo "in" > /sys/class/gpio/gpio97/direction
+#cat /sys/class/gpio/gpio97/value
+
+// bike charger1 is connected to GPIO1 => mapped to port 98
+
+#echo 98 > /sys/class/gpio/export
+#echo "out" > /sys/class/gpio/gpio98/direction
+echo 0 > /sys/class/gpio/gpio98/value
+#cat /sys/class/gpio/gpio98/value

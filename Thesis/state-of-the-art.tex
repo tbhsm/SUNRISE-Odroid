@@ -1,0 +1,12 @@
+\subsection{State-of-the-art analysis}
+In the last few years some work has already been done regarding the project as described in \Cref{sec:introduction}. As a consequence, the work to be done for this design can partially be built on these results.\\
+
+A major contribution was made in the development of C-code that is able to perform a few conceptual tasks \cite{report_pavel}. For example, this code is able to establish a connection with some devices connected to the ODROID and can read a register from those devices. However, it was not tested with all devices (e.g. temperature sensors) and it was not known what registers were read. The code also contains some functions to send data to the server and database, as well as a function to control the local display at the charging station. Beside the code, the report contained general information about the devices and C-code \cite{report_pavel}. It also contains a short description of the functions and protocols being used.\\
+
+The Victron power electronics system, the weather station and the temperature probes all communicate using Modbus. For C there is a library called \textit{libmodbus} \cite{libmodbus} that can be used to ease communication. By using this library, the communication can be done at a much higher level using the standard Modbus communication routines. Moreover, this library contains support for both Modbus RTU and Modbus TCP which are needed to read the registers from the Victron power electronics system (Modbus TCP) and the weather station and temperature probes (Modbus RTU).\\
+
+Another C library that is available for working with the ODROID is the \textit{WiringPi} library \cite{WiringPi}. This library is used to easily assign logic values to the GPIO pins of the ODROID.\\
+
+
+
+% cite naar zowel code als report van Pavel?

@@ -1,0 +1,10 @@
+#worldPosition = {0,0,0}
+#ambientReflCoef = {0.9}
+#diffuseReflCoef = {0.03}
+#specularReflCoef = {1.0}
+#initialRotation = {0,0,0}
+#shininessCoef = {150}
+#autoRotate = {false}
+#rotationSpeed = {10} 
+#meshNo = {0}
+#userRotation = {true}

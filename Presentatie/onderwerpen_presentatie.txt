@@ -1,0 +1,6 @@
+Onderwerpen voor in de presentatie:
+-Globale opbouw van de code(iets versimpelde versie van de codeoverview)
+-Casten van de variabelen
+-Bash scripts
+-FSM voor de aansturing van de chargers
+-Manual en robuustheid van de code noemen

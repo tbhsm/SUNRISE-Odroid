@@ -1,0 +1,104 @@
+@CHARSET "UTF-8";
+<style>
+#header {
+    height: 20%;
+    width: 100%;
+    z-index: 2;
+    color: #fff;
+}
+.background {
+    height: auto;
+    min-width: 100%;
+    background: url('cover1.jpg') no-repeat;
+    background-size : 100% 100%;
+    position: relative;
+    opacity : 0.8;
+    z-index: 1;
+    padding-bottom:15%
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:100%;
+    width:10%;
+    float:left;
+    font-style: oblique;
+    padding:5px;
+}
+#section {
+    width:80%;
+    float:left;
+    padding:10px;
+}
+#myDiagramDiv{
+    width:80%;
+    float:left;
+    padding:10px;
+    height: 25%;
+    
+    
+}
+#section2 {
+    width:80%;
+    float:left;
+    padding:10px;
+}
+#tabloid {
+    width:40%;
+    margin: 0 auto;
+}
+#myTable {
+	width: 80%
+	border: 1px solid black;
+	position: center;
+}
+#myTable tbody{
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-size: 100%;
+vertical-align: baseline;
+background: transparent;
+position: center;
+}
+#myTable thead{
+text-align: left;
+}
+#myTable thead th{
+background: -moz-linear-gradient(top,#F0F0F0,#DBDBDB 100%);
+background: -webkit-gradient(linear,left top, left bottom, color-stop(0%, #F0F0F0),col or-stop(100%,#DBDBDB));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F0F0F0',endColorst r='#DBDBDB',GradientType=0);
+border: 1px solid #B0B0B0;
+color: #444;
+font-size: 14 px;
+font-weight: bold;
+padding: 3px 10px;
+}
+#myTable td{
+padding: 3px 10px;
+}
+#myTable tr:nth-child(even){
+background: #F2F2F2;
+}
+#section3 {
+    width:80%;
+    float:left;
+    padding:10px;
+}
+#myDiagramDiv2{
+    width:80%;
+    float:left;
+    padding:10px;
+    height: 25%;
+    
+    
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;
+}
+</style>

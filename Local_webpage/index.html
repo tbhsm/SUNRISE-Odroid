@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>SUNRISE App</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="http://solarpoweredbikes.tudelft.nl/eud/global_css/navbar.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <header>
+        <p>Weer actueel</p>
+    </header>
+
+    <main>
+        <canvas id="webgl_canvas">
+            Uw browser heeft geen support voor HTML5. Overweeg een update.
+        </canvas>
+
+        <canvas hidden id="texture_create_canvas">
+        </canvas>
+
+        <section class="weather_data">
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+ 
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="modelviewer/gl-matrix.js"></script>
+    <script src="modelviewer/vec3.js"></script>
+    <script src="modelviewer/ezparser.js"></script>
+    <script src="modelviewer/resource_loader.js"></script>
+    <script src="modelviewer/modelViewer.js"></script>
+    <script src="dynamic_background_media.js"></script>
+    <script src="jquery-2.2.3.min.js"></script>
+    <script src="index.js"></script>
+
+    </script>
+
+
+</body>
+
+</html>

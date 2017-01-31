@@ -1,0 +1,63 @@
+
+failed on Sat Jun 18 03:09:26 2016
+
+value 1: 502
+value 2: 0
+value 3: 0
+value 4: 0
+value 5: 0
+value 6: 0
+
+failed on Sat Jun 18 03:09:27 2016
+
+value 1: 502
+value 2: 1298
+value 3: 6
+value 4: 0
+value 5: 0
+value 6: 0
+
+failed on Sat Jun 18 03:10:24 2016
+
+value 1: 502
+value 2: 0
+value 3: 0
+value 4: 0
+value 5: 0
+value 6: 0
+
+failed on Sat Jun 18 03:10:25 2016
+
+value 1: 502
+value 2: 0
+value 3: 0
+value 4: 0
+value 5: 0
+value 6: 0
+
+failed on Sat Jun 18 05:54:08 2016
+
+value 1: 502
+value 2: 1397
+value 3: 6
+value 4: 0
+value 5: 0
+value 6: 0
+
+failed on Sat Jun 18 05:54:09 2016
+
+value 1: 502
+value 2: 1404
+value 3: 6
+value 4: 0
+value 5: 0
+value 6: 0
+
+failed on Sat Jun 18 05:55:14 2016
+
+value 1: 502
+value 2: 0
+value 3: 0
+value 4: 0
+value 5: 0
+value 6: 0

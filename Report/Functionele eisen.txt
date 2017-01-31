@@ -1,0 +1,32 @@
+- Data uitlezen van het weerstation
+	* Sensorstatus
+	* Windrichting
+	* Windsnelheid
+	* Luchtvochtigheid
+	* Luchtdruk
+	* Zonintensiteit
+- Data uitlezen van Victron
+	* Zonnepanelen
+	* Batterijen van het station
+	* Grid
+	* Opladers
+- Aansturen van de opladers
+	* aan-/uitschakelen van opladers
+- Data uitlezen van de temperatuursensoren
+- Aansturen van het lokale scherm
+- Moet 24/7 kunnen draaien zonder reboot
+	* Memoryleaks mogen niet voorkomen
+- Customizable
+- Moet bestand zijn tegen stroomstoringen
+- Remote access (draadloze aanpassingen)
+- Moet blijven functioneren bij weggevallen internet
+	* Ontkoppelde fietsen onthouden tot er weer internet is
+	* Weerdata en Victrondata niet vergeten (wachtrij)
+	* Nieuwe fietsen weigeren (bestaande fietsen b.v. 5u 	doorladen bij storing langer dan 1u)
+- Moet kunnen herstellen van weggevallen internet
+	* Ontkoppelde fietsen moeten alsnog gemeld worden bij 		server (bij ontkoppelen zonder internet)
+- Te versturen data in juiste format zetten voor verzenden (scaling, etc.)
+
+Optioneel
+- Admin moet data van willekeurig register kunnen opvragen (andere info van weerstation/Victron)
+- Fancy LED-strip aansturen

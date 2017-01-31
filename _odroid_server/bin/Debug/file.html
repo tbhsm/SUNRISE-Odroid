@@ -1,0 +1,132 @@
+<html><title>Hello</title><body>
+<head>
+<meta http-equiv='refresh' content='300'>
+<link rel='stylesheet' type='text/css' href='mystyle.css'>
+<script src='go-debug.js'></script>
+</head>
+<body>
+<div id='header'>
+<div class='background'>
+<h1>TU Delft Bicycle shed</h1>
+</div>
+</div>
+<div id='nav'>
+About<br>
+Weather<br>
+Charger<br>
+</div><div id='section'>
+<h2>About</h2>
+<p>
+Solar eBike charging station is station which is power neutral. It is able to store solar energy and charge up to 4 electric bikes  and a single scooter.
+</p>
+<p>
+This is very much fun so fun.
+</p>
+</div>
+<div id='myDiagramDiv'>
+<script>
+var $ = go.GraphObject.make;
+var myDiagram = 
+$(go.Diagram, 'myDiagramDiv', 
+{
+initialContentAlignment: go.Spot.Center,
+'undoManager.isEnabled': true,
+layout: $(go.TreeLayout, 
+{ angle: 90, layerSpacing: 25})
+});
+myDiagram.nodeTemplate =
+$(go.Node, 'Horizontal',
+$(go.Picture,
+{ margin: 10, width: 40, height: 40, background: 'white' },
+new go.Binding('source')),
+$(go.TextBlock,
+'Default Text',  
+{ margin: 12, stroke: 'black', font: 'bold 10px sans-serif' },
+new go.Binding('text', 'name'))
+);
+var model = $(go.TreeModel);
+model.nodeDataArray =
+[ { key: '1',		name: 'Solar', source: 'solar.png' },
+{ key: '3', parent: '2', name: 'Battery', source: 'battery.GIF' },
+{ key: '2', parent: '1', name: 'Converter',  source: 'converter.gif' },
+{ key: '3', parent: '2', name: 'Charger',  source: 'Charger.png' }
+];
+myDiagram.model = model;
+</script>
+</div>
+<div id='section2'>
+<h2>Weather</h2>
+<p>
+Here will be the info from Weather station. Like
+<div id= 'tabloid'> 
+<table id='myTable'>
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th>Name</th>
+<th>Value</th>
+</tr>
+<tr>
+<td>Air Temperature</td>
+<td> 24.300000 C</td>
+<td>Global Irradiation</td>
+<td>0.000000 </td>
+</tr>
+<tr>
+<td>Relative Humidity</td>
+<td>41.600000 </td>
+<td>Air Pressure</td>
+<td>5.000000 kPa</td>
+</tr>
+<tr>
+<td>Wind Speed</td>
+<td>41.600000 m/s</td>
+<td>Absolute Precipitation</td>
+<td>1021.000000 </td>
+</tr>
+</table>
+</div> 
+</p>
+</div>
+<div id='section3'>
+<h2>Charger</h2>
+<p>
+<div id='myDiagramDiv2'>
+<script>
+var $ = go.GraphObject.make;
+var myDiagram2 =
+$(go.Diagram, 'myDiagramDiv2',
+{
+initialContentAlignment: go.Spot.Center,
+'undoManager.isEnabled': true,
+layout: $(go.TreeLayout,
+{ angle: 90, layerSpacing: 25})
+});
+myDiagram2.nodeTemplate =
+$(go.Node, 'Horizontal',
+$(go.Picture,
+{ margin: 10, width: 40, height: 40, background: 'white' },
+new go.Binding('source')),
+$(go.TextBlock,
+'Default Text',
+{ margin: 12, stroke: 'black', font: 'bold 10px sans-serif' },
+new go.Binding('text', 'name'))
+);
+var model2 = $(go.TreeModel);
+model2.nodeDataArray =
+[ { key: '1',		name: 'Converter', source: 'converter.gif' },
+{ key: '2', parent: '1', name: 'Charger', source: 'Wireless.png' },
+{ key: '2', parent: '1', name: 'Charger',  source: 'Charger.png' },
+{ key: '2', parent: '1', name: 'Charger',  source: 'Chargeron.png' },
+{ key: '2', parent: '1', name: 'Charger',  source: 'Chargeron.png' },
+{ key: '2', parent: '1', name: 'Charger',  source: 'Chargeron.png' },
+{ key: '2', parent: '1', name: 'Charger',  source: 'Chargeron.png' },
+];myDiagram2.model = model2;
+</script>
+</div>
+</p>
+</div>
+<div id='footer'>
+Copyright © TU Delft
+</div>
+</body>	</html>

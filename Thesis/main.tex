@@ -1,0 +1,149 @@
+\documentclass[a4paper, 11pt, onecolumn, compsoc, twoside]{IEEEtran}
+\usepackage{xcolor}
+\usepackage{listings}			% Used to include VHDL-code and fragments
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\bf\color{blue},
+  tabsize=4
+}
+\renewcommand{\lstlistingname}{Script}% Listing -> Script
+\usepackage[english]{babel}		% English hyphenation patterns and english names 
+\usepackage{pslatex}			% Times, helvetica and courier
+\usepackage[T1]{fontenc}		% Nicer font-encoding
+\usepackage[hidelinks]{hyperref}% Gives clickable references in pdf-file
+\usepackage{graphicx}			% Used to include .pdf, .jpg and .png-files
+\usepackage{tabularx}			% Used for evenly spread tables
+\usepackage{eso-pic}			% Absolute positioning, used for lines-to-track appendix and front- and backpage
+\usepackage{datetime}			% Used for some data-references
+\usepackage[font=small,format=plain,labelfont=bf,up,textfont=up]{caption}	% Nicer captions
+\usepackage{subcaption}
+\usepackage{nonfloat}			% Captions for non-floating figures and tables
+\usepackage{nextpage}			% Advanced nextpage commands
+\usepackage{keystroke}			% "real" keys
+%\usepackage[nottoc]{tocbibind}		% Include Bibliography in ToC
+\usepackage{multirow}			% Span text over multiple rows
+\usepackage{verbatim}			% For comment-environment
+\usepackage[left=3.5cm, right=2.5cm]{geometry}
+\usepackage[section]{placeins}  %zorgt ervoor dat floats niet onder een andere section komen, want dat is vervelend!
+\usepackage{lmodern}
+\usepackage{amsmath}
+%\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{ntheorem}
+%\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{a4wide}
+\usepackage{gensymb}
+\usepackage{cite}
+\usepackage{amsfonts}
+\usepackage{longtable}
+\usepackage{soul}
+\usepackage{import}
+\usepackage{placeins} %use \FloatBarrier to prevent figs/tabulars into other (sub)section
+\usepackage{cleveref}  % the Smart Reference, just use \cref{name}.
+\usepackage{enumitem, hyperref} % om te kunnen refereren naar het programma van eisen
+\makeatletter
+\def\namedlabel#1#2{\begingroup
+    #2%
+    \def\@currentlabel{#2}%
+    \phantomsection\label{#1}\endgroup
+}
+\makeatother
+%\setlength\parindent{0pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Settings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Settings for hyperref-package
+\hypersetup{	colorlinks	= false,		%
+		pdfborder	= 0 0 0}		%
+
+% Settings for listings-package
+\lstset{	numbers		= left,			%
+		numberstyle	= \tiny,		%
+		numbersep	= 5pt,			%
+		language	= VHDL,			%
+		breaklines	= true,			%
+		showspaces	= false,		%
+		showstringspaces= false}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{document}
+
+	\newcounter{tempcounter}	% For temporarily breaking enumerate-environments
+
+	\pagestyle{empty}		% To prevent pagenumber on backside of titlepage
+	\input{frontpage}
+%	\input{versieoverzicht}
+	\input{abstract} 
+    
+	\pagestyle{headings}
+
+
+	\clearpage
+	\tableofcontents
+	\clearpage
+    
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 				The Input Files for each Section here:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{introduction}
+	\input{problem}
+	\input{state-of-the-art}
+	\input{overview}
+        \clearpage 	   
+	\input{requirements}
+		\clearpage    	
+	\input{design}
+	\input{codeoverview}
+	\input{weatherstation}
+	\input{victron}
+	\input{temperature}
+	\input{chargers}
+	\input{display}
+	\input{bash}
+		\clearpage    	
+    \input{results} 
+        \clearpage     
+ 	\input{discussion}
+ 		\clearpage
+  	\input{conclusions}
+ 	\input{future}
+ 		\clearpage
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%							Bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%	\bibliographystyle{plain}
+%	\bibliography{bibliography}
+
+	\bibliographystyle{IEEEtran}
+%	\nocite{*}
+	\begingroup
+	\raggedright
+	\bibliography{bibliography}
+	\endgroup
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%								Appendix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\clearpage
+	\section*{Appendix}	
+	\renewcommand\thesection{\Alph{section}}	
+	\setcounter{section}{0}
+		\input{appendix_setup_manual}
+		\input{appendix_Bash}
+
+		
+        
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{backpage}
+
+\end{document}

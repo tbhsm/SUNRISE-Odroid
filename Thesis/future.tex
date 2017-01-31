@@ -1,0 +1,21 @@
+\subsection{Future work and recommendations}\label{sec:future}
+As a low-level part of the charging station the ODROID must have solid software packages. To further improve the functionality and stability of this software some general ideas are given that can be elaborated in the future.\\
+
+%An important feature of the charging station is the detection of a charging cable that is unplugged. If a charging cable accidentally is pulled out or an e-bike is removed, the chargers must turn off. Another GPIO pin from the ODROID can be used, together with some circuitry, to test whether a charging cable is connected or not. Using this feature it now also becomes possible to only turn on the chargers once an e-bike is connected, instead of directly turning it on when a reservation is made. At this moment, this feature is not yet available. However, some testing was done with this concept. \\
+
+%To achieve a higher level of safety the chargers must be turned off when the program happens to fail. For example, if a logic high is written to a GPIO pin, and thus essentially a charger is turned on, the GPIO pin remains at a logic high when the program crashes. Of course such behavior is not desired, hence a separate program can be written that checks if the main program is running. It can then restart the main program such that the chargers are again controlled in a correct way.\\
+
+As an additional feature for end-users, the battery voltage of their e-bikes could be displayed on the webpage. A sensor and all the neccesary circuitry can be developed in the future for this purpose. The C-code running on the ODROID also has to be adapted to read the sensor values and transfer the data to the server.\\
+
+%When the internet connection fails it is important that the program still keeps running. However, since no data can be received from the server, no new e-bikes can be connected for charging. Turning off the chargers for e-bikes that were already charging is not desired and hence a solution must be found for this issue. If the charging cable detection is finished, this detection be used for this issue as well. For example, during a longer internet failure, the chargers can be set to charge for a maximum of a few hours and turn off when either the charging cable is disconnected or the time limit expires.\\
+
+\Cref{fig:station_concept} shows that a local display will be mounted on the charging station. As a clearly visible device it is therefore important to have it running by the time the charging station is built. Currently, only the concept of the controlling mechanism is designed. The final implementation of the website together with the JavaScript and C-code still have to be designed and tested. Moreover, it is always possible to improve the information shown on the webpage and the design of the webpage itself.\\
+
+During robustness tests (see \Cref{sec:robustness_tests}), it was discovered that the order in which the USB connections of the temperature probes and weather station were connected was of importance. This was due to the fact that the connection was established statically in the C-code. In future work, this could be allocated dynamically. By doing this, the connection order is no longer of importance, and the system will be more robust (for example during maintenance).\\
+
+As described in \Cref{sec:temperature_sensor_failure}, polling the temperature sensors is quite known to fail. The code was designed to never cause the C-code to crash when this happens, however it does mean that data points are missing about a third of the time. If a more regular set of data is desired, more research has to be done to extract the issue that causes this problem.\\
+
+As an addition to the existing concept of the charging station, a LED strip could be added to the exterior of the station (behind matte glass, for example). This could be controlled by the ODROID based on the input of several proximity sensors. The LED strip should be fed by an external power supply (since these require a lot more power than the GPIO pins can deliver), probably a 230V connection of the Victron system. One should keep an eye on the number of available GPIO pins if this were to be developed.
+
+%Not sure about this one
+%USB allocations (wordt nu statisch gedaan maar kan waarschijnlijk ook dynamisch)

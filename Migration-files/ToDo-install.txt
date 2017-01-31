@@ -1,0 +1,4 @@
+Code::Blocks IDE
+Modbus package
+WiringPi
+Upstart (place map in /.config)

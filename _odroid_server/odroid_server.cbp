@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="odroid_server" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/odroid_server" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/usr/include/" />
+					<Add directory="/usr/lib" />
+					<Add directory="/usr/local/lib" />
+					<Add directory="/usr/local/include/modbus" />
+				</Compiler>
+				<Linker>
+					<Add library="wiringPi" />
+					<Add library="wiringPiDev" />
+					<Add library=":libmodbus.so.5" />
+					<Add library="pthread" />
+					<Add directory="/usr/local/lib" />
+					<Add directory="/usr/lib" />
+					<Add directory="/usr/local/lib/pkgconfig" />
+					<Add directory="/usr/local/include/modbus" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/odroid_server" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="BicycleShed.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="BicycleShed.h" />
+		<Unit filename="Display.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Display.h" />
+		<Unit filename="GPIOs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="GPIOs.h" />
+		<Unit filename="ScaleTables.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ScaleTables.h" />
+		<Unit filename="ServerCom.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ServerCom.h" />
+		<Unit filename="Victron.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Victron.h" />
+		<Unit filename="Weather.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Weather.h" />
+		<Unit filename="lib-json.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib-json.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

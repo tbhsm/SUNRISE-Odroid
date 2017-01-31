@@ -1,0 +1,27 @@
+MODBUS settings for the Weatherstation and Temperature sensor.
+
+Weatherstation:
+
+dev:		ttyUSB0
+baud:		19200
+parity:		N
+Bits:		8
+stop:		1
+
+server_ID:	1
+
+
+Temperature:
+
+dev:		ttyUSB1
+baud:		9600
+parity:		N
+Bits:		8
+stop:		1
+
+server_ID:	1
+
+
+VICTRON:
+
+IP:			192.168.1.3

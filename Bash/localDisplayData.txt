@@ -1,0 +1,8 @@
+{"temperature": 23.500000,
+"wind-chill": 25.600000,
+"humidity": 44.700000,
+"wind speed": 0.000000,
+"radiation": 4.700000,
+"air pressure": 1022.000000,
+"wind direction": 0.000000
+}

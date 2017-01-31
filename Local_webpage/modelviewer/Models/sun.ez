@@ -1,0 +1,13 @@
+#worldPosition = {0,0,0}
+#initialRotation = {0,0,0}
+#ambientReflCoef = {1.4}
+#diffuseReflCoef = {0.05}
+#specularReflCoef = {1.0}
+#shininessCoef = {50}
+#autoRotate = {false}
+#rotationSpeed = {0.2} 
+#meshNo = {0}
+#userRotation = {true}
+#isLightSource = {true}
+//how much light it emits (RGB)
+#lightIntensity = {40,40,40}

@@ -1,0 +1,11 @@
+Settings->Compiler
+
+Linker settings->Link libraries
+mysqlclient; wiringPi; wiringPiDev; pthread; curl; :libmodbus.so.5
+
+Search directories->Compiler
+/usr/include/; /usr/lib; /usr/local/lib; /usr/include/mysql; /usr/local/include/modbus
+
+Search directories->Linker
+/usr/local/lib; /usr/lib; /usr/local/lib/pkgconfig; /usr/local/include/modbus
+

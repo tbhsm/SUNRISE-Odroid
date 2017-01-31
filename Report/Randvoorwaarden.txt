@@ -1,0 +1,5 @@
+- Systeem moet worden aangestuurd door een minicomputer (e.g. Odroid, RBP) ok
+- Maximale uitleessnelheid ok
+- Aantal laadpunten dat moet worden aangestuurd (4 fietsen, 1 draadloos, 1 scooter) ok
+- De code wordt geschreven in C ok
+- Model Victron en weerstation staat vast ok

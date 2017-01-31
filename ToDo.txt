@@ -1,0 +1,31 @@
+- Launchpad functie schrijven
+- Webpage locale scherm
+
+DONE:
+- readInput() moet een integer array als input krijgen en deze waarden kunnen filteren en schalen (schalen met header?)
+- FHD werkend krijgen op ODROID
+- xvnc automatisch afsluiten (b.v. max. 2 processen)
+- functie maken die uitgelezen data print (onafhankelijk van werkende serverconnectie)
+- int16 in Victron is niet correct gecast
+- xvnc_killer.sh moet N/A wegfilteren
+- Weerstation moet 'return 0' regels krijgen die writeToServer omzeilen als er geen connectie via modbus gemaakt kan worden.
+- Victron moet 'return 0' regels krijgen die writeToServer omzeilen als er geen connectie via modbus gemaakt kan worden.
+- Casten van weerstation
+- Opstartsequence (starten programma & opstarten browser in full-screen)
+- Uitzoeken welke Multiplus uitgelezen moet worden (8W/70W, 2W/50W)
+- Wat gebeurt er als het internet uitvalt en je wilt een fiets opladen? --> Fietsen die al worden geladen kunnen nog tot 4 uur lang doorladen. Te versturen data wordt onthouden (Victron en weerdata).
+- Casten van temperatuursensoren
+- Chargers aansturen via GPIO
+	- Relais kunnen schakelen
+- j moet elke 1.5 seconden toenemen zodat chargers vaker uitgelezen kunnen worden. 
+- ADAM checken over 'niet-aangesloten code' (uint16_t is 65535 maar temp is -50?)
+- Memory allocs vóór functieaanroep (tip van Peter)
+- Tweede MultiPlus uitlezen->inclusief slave id als functieargument meegeven implementeren
+- Temperatuursensoren werken niet altijd?
+- Recovery voor het wegvallen van stroom
+- USB connections checken
+- Chargers uitzetten na x tijd bij geen internet
+- Figure 4 met de odroid-usb-rtu-temperatuursensoren nog eens bekijken
+- Chargers aansturen via GPIO
+	- Uitlezen of fiets is aangesloten
+

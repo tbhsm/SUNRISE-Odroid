@@ -1,0 +1,11 @@
+Gebruikte bronnen:
+-Verslagen van Pavel ok
+-Victron datasheet ok
+-Excel bestand met registers Victron ok
+-Weerstation datasheet ok
+-Temperatuursensoren datasheet ok
+-ADAM module datasheet/handleiding
+-ODROID pin layout(In user manual) ok
+-http://www.hardkernel.com/main/products/prdt_info.php?g_code=G143703355573&tab_idx=2
+(spanning gpio ports) ok
+-datasheet bs170 transistor ok

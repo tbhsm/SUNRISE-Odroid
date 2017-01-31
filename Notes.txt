@@ -1,0 +1,9 @@
+Algemene Notes
+
+-Weerstation en temp. sensoren niet tegelijk uitlezen
+	-Gaat soms bij allebei goed, meestal maar bij een
+	->Weerstation en temp. sensoren niet tegelijk uit laten lezen
+
+-Tegelijk met de Victron kan dat waarschijnlijk wel.
+
+Voor TODO.txt: Programma hierop aanpassen

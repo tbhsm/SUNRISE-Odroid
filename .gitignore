@@ -1,0 +1,12 @@
+.metadata/
+Thesis/*.log
+Thesis/*.aux
+Thesis/*.bbl
+Thesis/*.blg
+Thesis/*.dvi
+Thesis/*.out
+Thesis/*.gz
+Thesis/*.thm
+Thesis/*.toc
+*.DS_Store
+localDisplayData.json

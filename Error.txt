@@ -1,0 +1,195 @@
+==8113== 
+==8113== Process terminating with default action of signal 2 (SIGINT)
+==8113==    at 0x4976656: nanosleep (syscall-template.S:81)
+==8113==    by 0x4993B57: usleep (usleep.c:32)
+==8113==    by 0x9267: main (BicycleShed.c:108)
+--8113-- Discarding syms at 0x4de4a04-0x4de8b4c in /lib/arm-linux-gnueabihf/libnss_files-2.19.so due to munmap()
+--8113-- Discarding syms at 0x4df3840-0x4df4014 in /lib/arm-linux-gnueabihf/libnss_mdns4_minimal.so.2 due to munmap()
+--8113-- Discarding syms at 0x4dfeb50-0x4e00af4 in /lib/arm-linux-gnueabihf/libnss_dns-2.19.so due to munmap()
+--8113-- Discarding syms at 0x4e0c540-0x4e15124 in /lib/arm-linux-gnueabihf/libresolv-2.19.so due to munmap()
+==8113== 
+==8113== HEAP SUMMARY:
+==8113==     in use at exit: 0 bytes in 0 blocks
+==8113==   total heap usage: 377,718 allocs, 377,718 frees, 48,820,330 bytes allocated
+==8113== 
+==8113== All heap blocks were freed -- no leaks are possible
+==8113== 
+==8113== ERROR SUMMARY: 5251 errors from 11 contexts (suppressed: 75519 from 7)
+==8113== 
+==8113== 2 errors in context 1 of 11:
+==8113== Invalid write of size 2
+==8113==    at 0xA2C6: jsonDecodeArr (lib-json.c:201)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA91D: writeVictron3ToServer (ServerCom.c:78)
+==8113==    by 0x939B: functionVictronData (BicycleShed.c:178)
+==8113==    by 0x91C5: main (BicycleShed.c:100)
+==8113==  Address 0x552678a is 0 bytes after a block of size 2 alloc'd
+==8113==    at 0x482E358: malloc (vg_replace_malloc.c:296)
+==8113==    by 0xA1BF: jsonDecodeArr (lib-json.c:179)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA91D: writeVictron3ToServer (ServerCom.c:78)
+==8113==    by 0x939B: functionVictronData (BicycleShed.c:178)
+==8113==    by 0x91C5: main (BicycleShed.c:100)
+==8113== 
+==8113== 
+==8113== 2 errors in context 2 of 11:
+==8113== Invalid write of size 2
+==8113==    at 0xA2C6: jsonDecodeArr (lib-json.c:201)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA8F1: writeVictron2ToServer (ServerCom.c:71)
+==8113==    by 0x937B: functionVictronData (BicycleShed.c:172)
+==8113==    by 0x91C5: main (BicycleShed.c:100)
+==8113==  Address 0x552601a is 0 bytes after a block of size 2 alloc'd
+==8113==    at 0x482E358: malloc (vg_replace_malloc.c:296)
+==8113==    by 0xA1BF: jsonDecodeArr (lib-json.c:179)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA8F1: writeVictron2ToServer (ServerCom.c:71)
+==8113==    by 0x937B: functionVictronData (BicycleShed.c:172)
+==8113==    by 0x91C5: main (BicycleShed.c:100)
+==8113== 
+==8113== 
+==8113== 2 errors in context 3 of 11:
+==8113== Invalid write of size 2
+==8113==    at 0xA2C6: jsonDecodeArr (lib-json.c:201)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA8C5: writeVictron15ToServer (ServerCom.c:63)
+==8113==    by 0x935B: functionVictronData (BicycleShed.c:166)
+==8113==    by 0x91C5: main (BicycleShed.c:100)
+==8113==  Address 0x55254d2 is 0 bytes after a block of size 2 alloc'd
+==8113==    at 0x482E358: malloc (vg_replace_malloc.c:296)
+==8113==    by 0xA1BF: jsonDecodeArr (lib-json.c:179)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA8C5: writeVictron15ToServer (ServerCom.c:63)
+==8113==    by 0x935B: functionVictronData (BicycleShed.c:166)
+==8113==    by 0x91C5: main (BicycleShed.c:100)
+==8113== 
+==8113== 
+==8113== 2 errors in context 4 of 11:
+==8113== Invalid write of size 2
+==8113==    at 0xA2C6: jsonDecodeArr (lib-json.c:201)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA899: writeVictron1ToServer (ServerCom.c:55)
+==8113==    by 0x933F: functionVictronData (BicycleShed.c:160)
+==8113==    by 0x91C5: main (BicycleShed.c:100)
+==8113==  Address 0x5524a92 is 0 bytes after a block of size 2 alloc'd
+==8113==    at 0x482E358: malloc (vg_replace_malloc.c:296)
+==8113==    by 0xA1BF: jsonDecodeArr (lib-json.c:179)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA899: writeVictron1ToServer (ServerCom.c:55)
+==8113==    by 0x933F: functionVictronData (BicycleShed.c:160)
+==8113==    by 0x91C5: main (BicycleShed.c:100)
+==8113== 
+==8113== 
+==8113== 4 errors in context 5 of 11:
+==8113== Invalid write of size 2
+==8113==    at 0xA2C6: jsonDecodeArr (lib-json.c:201)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA80D: writeWeatherToServer (ServerCom.c:32)
+==8113==    by 0x93EF: weatherDisplay (Display.c:31)
+==8113==    by 0x9299: functionWeatherData (BicycleShed.c:128)
+==8113==    by 0x9189: main (BicycleShed.c:82)
+==8113==  Address 0x54ff3da is 0 bytes after a block of size 2 alloc'd
+==8113==    at 0x482E358: malloc (vg_replace_malloc.c:296)
+==8113==    by 0xA1BF: jsonDecodeArr (lib-json.c:179)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA80D: writeWeatherToServer (ServerCom.c:32)
+==8113==    by 0x93EF: weatherDisplay (Display.c:31)
+==8113==    by 0x9299: functionWeatherData (BicycleShed.c:128)
+==8113==    by 0x9189: main (BicycleShed.c:82)
+==8113== 
+==8113== 
+==8113== 6 errors in context 6 of 11:
+==8113== Invalid write of size 2
+==8113==    at 0xA2C6: jsonDecodeArr (lib-json.c:201)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA9AB: writeChargeToServer (ServerCom.c:95)
+==8113==    by 0xA7C3: emptyStatus (lib-json.c:366)
+==8113==    by 0xABFB: writeDataToServer (ServerCom.c:192)
+==8113==    by 0xA873: getChargerState (ServerCom.c:48)
+==8113==    by 0x962D: setChargers (GPIOs.c:134)
+==8113==    by 0x9177: main (BicycleShed.c:77)
+==8113==  Address 0x54f9732 is 0 bytes after a block of size 2 alloc'd
+==8113==    at 0x482E358: malloc (vg_replace_malloc.c:296)
+==8113==    by 0xA1BF: jsonDecodeArr (lib-json.c:179)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA9AB: writeChargeToServer (ServerCom.c:95)
+==8113==    by 0xA7C3: emptyStatus (lib-json.c:366)
+==8113==    by 0xABFB: writeDataToServer (ServerCom.c:192)
+==8113==    by 0xA873: getChargerState (ServerCom.c:48)
+==8113==    by 0x962D: setChargers (GPIOs.c:134)
+==8113==    by 0x9177: main (BicycleShed.c:77)
+==8113== 
+==8113== 
+==8113== 14 errors in context 7 of 11:
+==8113== Invalid write of size 2
+==8113==    at 0xA2C6: jsonDecodeArr (lib-json.c:201)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA9AB: writeChargeToServer (ServerCom.c:95)
+==8113==    by 0x9721: setChargers (GPIOs.c:163)
+==8113==    by 0x9177: main (BicycleShed.c:77)
+==8113==  Address 0x55089fa is 0 bytes after a block of size 2 alloc'd
+==8113==    at 0x482E358: malloc (vg_replace_malloc.c:296)
+==8113==    by 0xA1BF: jsonDecodeArr (lib-json.c:179)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA9AB: writeChargeToServer (ServerCom.c:95)
+==8113==    by 0x9721: setChargers (GPIOs.c:163)
+==8113==    by 0x9177: main (BicycleShed.c:77)
+==8113== 
+==8113== 
+==8113== 614 errors in context 8 of 11:
+==8113== Invalid write of size 2
+==8113==    at 0xA2C6: jsonDecodeArr (lib-json.c:201)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA873: getChargerState (ServerCom.c:48)
+==8113==    by 0x962D: setChargers (GPIOs.c:134)
+==8113==    by 0x9177: main (BicycleShed.c:77)
+==8113==  Address 0x4de2fe2 is 0 bytes after a block of size 2 alloc'd
+==8113==    at 0x482E358: malloc (vg_replace_malloc.c:296)
+==8113==    by 0xA1BF: jsonDecodeArr (lib-json.c:179)
+==8113==    by 0xAB93: writeDataToServer (ServerCom.c:177)
+==8113==    by 0xA873: getChargerState (ServerCom.c:48)
+==8113==    by 0x962D: setChargers (GPIOs.c:134)
+==8113==    by 0x9177: main (BicycleShed.c:77)
+==8113== 
+==8113== 
+==8113== 1535 errors in context 9 of 11:
+==8113== Invalid read of size 2
+==8113==    at 0x9984: setChargers (GPIOs.c:235)
+==8113==    by 0x9177: main (BicycleShed.c:77)
+==8113==  Address 0x54f5a52 is 0 bytes after a block of size 2 alloc'd
+==8113==    at 0x482E358: malloc (vg_replace_malloc.c:296)
+==8113==    by 0xABAB: writeDataToServer (ServerCom.c:182)
+==8113==    by 0xA873: getChargerState (ServerCom.c:48)
+==8113==    by 0x962D: setChargers (GPIOs.c:134)
+==8113==    by 0x9177: main (BicycleShed.c:77)
+==8113== 
+==8113== 
+==8113== 1535 errors in context 10 of 11:
+==8113== Invalid read of size 2
+==8113==    at 0x96A6: setChargers (GPIOs.c:152)
+==8113==    by 0x9177: main (BicycleShed.c:77)
+==8113==  Address 0x54f5a52 is 0 bytes after a block of size 2 alloc'd
+==8113==    at 0x482E358: malloc (vg_replace_malloc.c:296)
+==8113==    by 0xABAB: writeDataToServer (ServerCom.c:182)
+==8113==    by 0xA873: getChargerState (ServerCom.c:48)
+==8113==    by 0x962D: setChargers (GPIOs.c:134)
+==8113==    by 0x9177: main (BicycleShed.c:77)
+==8113== 
+==8113== 
+==8113== 1535 errors in context 11 of 11:
+==8113== Invalid read of size 2
+==8113==    at 0x9BF4: checkChargerValidity (GPIOs.c:294)
+==8113==    by 0x9635: setChargers (GPIOs.c:137)
+==8113==    by 0x9177: main (BicycleShed.c:77)
+==8113==  Address 0x54f5a52 is 0 bytes after a block of size 2 alloc'd
+==8113==    at 0x482E358: malloc (vg_replace_malloc.c:296)
+==8113==    by 0xABAB: writeDataToServer (ServerCom.c:182)
+==8113==    by 0xA873: getChargerState (ServerCom.c:48)
+==8113==    by 0x962D: setChargers (GPIOs.c:134)
+==8113==    by 0x9177: main (BicycleShed.c:77)
+==8113== 
+--8113-- 
+--8113-- used_suppression:  75507 Ubuntu804-hack-1 /usr/lib/valgrind/default.supp:572
+--8113-- used_suppression:     12 dl-hack3-cond-1 /usr/lib/valgrind/default.supp:1206
+==8113== 
+==8113== ERROR SUMMARY: 5251 errors from 11 contexts (suppressed: 75519 from 7)

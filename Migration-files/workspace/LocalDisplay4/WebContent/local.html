@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv='refresh' content="300">
+<link rel="stylesheet" type='text/css' href="mystyle.css">
+</head>
+<body>
+
+
+<div id='header'>
+<div class='background'>
+<h1>TU Delft Bicycle shed</h1>
+</div>
+</div>
+
+<div id="nav">
+About<br>
+Weather<br>
+Charger<br>
+</div>
+
+<div id='section'>
+<h2>About</h2>
+<p>
+The Bicycle Shed is super project. Here u can find useful info like weather
+and some info about the charger. This is a passive site
+</p>
+<p>
+This is very much fun so fun.
+</p>
+</div>
+<div id="section2">
+<h2>Weather</h2>
+<p>
+Here will be the info from Weather station.
+</p>
+
+<?php
+$servername = 'localhost';
+$username = 'root';
+$password = 'odroid';
+$dbname = 'odroid';
+
+// Create connection
+$conn = mysql_connect($servername, $username, $password, $dbname);
+// Check connection
+if (! $conn) {
+    die('Connection failed: ' . $conn->connect_error);
+}
+
+$sql = 'SELECT Description,Value FROM victron';
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["value"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+?> 
+
+</div>
+<div id="section3">
+<h2>Charger</h2>
+<p>
+Here will be the info from Weather station.
+</p>
+<?php
+echo 'Ahoj';
+?>
+
+</div>
+
+
+
+<div id="footer">
+Copyright © TU Delft
+</div>
+
+</body>
+</html>

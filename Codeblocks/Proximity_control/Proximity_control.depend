@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1466433667 source:/home/odroid/Documents/SUNRISE-Odroid/Proximity_control/main.c
+	<stdio.h>
+	<stdlib.h>
+	<WiringPi.h>
+	<SoftPwm.h>
+	<unistd.h>
+

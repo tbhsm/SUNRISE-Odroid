@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="150mm"
+   height="80mm"
+   viewBox="0 0 531.49606 283.46457"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="ODROID_temperature_sensors.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="328.15305"
+     inkscape:cy="180.60085"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1536"
+     inkscape:window-height="803"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Laag 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-768.89764)">
+    <rect
+       style="fill:none"
+       id="rect3340"
+       width="1345.7142"
+       height="1005.7143"
+       x="-585.71429"
+       y="-119.06637" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4144"
+       width="173.147"
+       height="90.809784"
+       x="114.40181"
+       y="923.70465"
+       ry="5.442368" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="400"
+       y="1915.2194"
+       id="text4146"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4148"
+         x="400"
+         y="1915.2194"
+         style="font-size:180px" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="136.87569"
+       y="979.12616"
+       id="text4150"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4152"
+         x="136.87569"
+         y="979.12616"
+         style="font-size:30px">ODROID</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:1.27795768;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4156-9"
+       width="53.155018"
+       height="19.314953"
+       x="115.56883"
+       y="924.5838" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:11.25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="129.77199"
+       y="938.28192"
+       id="text4160-2"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4162-9"
+         x="129.77199"
+         y="938.28192">USB</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4144-2-4"
+       width="72.70446"
+       height="46.795815"
+       x="103.79491"
+       y="802.28638"
+       ry="2.8045442" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 140.63229,923.54145 0,-75"
+       id="path4253"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="111.092"
+       y="841.39862"
+       id="text4397"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4399"
+         x="111.092"
+         y="841.39862">USB</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="145.24345"
+       y="819.45581"
+       id="text4405"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4407"
+         x="145.24345"
+         y="819.45581">RTU</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4144-2-42-3"
+       width="72.70446"
+       height="46.795815"
+       x="239.98985"
+       y="802.28595"
+       ry="2.8045442" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="257.86118"
+       y="822.39856"
+       id="text4554"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4556"
+         x="257.86118"
+         y="822.39856">ADAM</tspan><tspan
+         sodipodi:role="line"
+         x="257.86118"
+         y="838.02356"
+         id="tspan4558">4015</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect4144-2-4-9-2"
+       width="72.70446"
+       height="46.795815"
+       x="379.27759"
+       y="802.28595"
+       ry="2.8045442" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:12.5px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="383.48944"
+       y="821.10144"
+       id="text4584"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan4586"
+         x="383.48944"
+         y="821.10144"
+         style="font-size:10px">Temperature </tspan><tspan
+         sodipodi:role="line"
+         x="383.48944"
+         y="833.60144"
+         id="tspan4588"
+         style="font-size:10px">sensors (4x)</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 313.48943,824.25573 64.28572,0"
+       id="path4206"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 174.20371,824.97002 64.28572,0"
+       id="path4206-0"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 104.918,804.25573 70,42.85715"
+       id="path4223"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

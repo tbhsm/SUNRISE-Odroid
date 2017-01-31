@@ -1,0 +1,32 @@
+\section{Discussion}\label{sec:discussion}
+\subsection{Desynchronization}
+Although the loops described in \Cref{sec:code_overview} take only a couple of milliseconds to execute, it is technically possible that they take more than 1.5 seconds to complete. For example, when \verb|j| equals 400, both \verb|weatherDisplay()| and \verb|functionVictronData()| have to be executed. This could potentially cause a small desynchronization.\\
+
+To overcome this, functions could be seperated in smaller chunks. For example, splitting the three Victron functions, or even seperating fetching and sending of data. This will decrease the chance of a function taking more than 1.5 seconds to execute. Another solution could be the use of threads, so whenever a thread is unable to finish within 1.5 seconds, it will simply run parallel to the main function. With this implementation one should be careful not to have a weather station function and a temperature probe function fetching data at the same time, because the ADAM-4015 module cannot handle two parallel requests.\\
+
+This potential issue is, however, not likely to occur in practice and will make the code unnecessary complex. Functions are simply executed too fast to cause any desynchronization (e.g. fetching and sending Victron data, weather data and charger data takes only 0.23 seconds at most), and even if it should happen, there is only a desynchronization in the order of a few seconds, which is not an issue. The sleep function (that is used to halt the program when 1.5 seconds have not yet passed) has also been secured by not executing whenever a negative amount of seconds is remaining (when it is taking more than 1.5 seconds), because it will run indefinately if a negative amount is entered.\\
+
+Although the problem mentioned above has not occurred during testing, a cycle would still take longer than expected (10 seconds longer every 10 minutes). This desynchronization is caused by the code between calculating the remaining time until 1.5 seconds and sleeping (see Script \ref{desync}). Line 3 and 6 therefore take roughly $\frac{5}{5*60}=25$ms to execute. This issue can be solved by decreasing \verb|loop_time| by 25ms. However, because this is not really an issue (and it is not really predictable), it was decided that this correction was unnecessary complex, thus it was not implemented.
+
+\scriptsize
+\begin{lstlisting}[language=C,caption={A cause of small desynchronization},label={desync}]
+	diff = clock()-start; //calculate remaining time
+
+	printf("the time taken was %f \n",((float)diff/CLOCKS_PER_SEC));
+
+    //Make sure the cycles do not take less than 1.5 seconds
+	n = (int)((loop_time - ((double)diff)/CLOCKS_PER_SEC) * 1000000);
+	if (n>0) usleep(n); /*pause before next iteration*/
+\end{lstlisting}
+\normalsize
+
+\subsection{Memory allocation}\label{sec:malloc}
+\Cref{fig:code_overview} shows that the program is built on an endless loop in which data is fetched and sent to the server. Since the data is stored in arrays it might be tempting to use dynamic memory allocation by using \verb|malloc| or \verb|calloc|. However, the program must run 24/7 \ref{eis:2.3} and therefore memory leaks are not permitted. As dynamic memory allocation is a major cause of memory leaks, it was chosen to use dynamic memory allocation only if it was absolutely necessary. Regarding the flexibility and optimal usage of memory resources, it may be an advantage to use \verb|malloc| or \verb|calloc|. On the other hand, in larger programs a common mistake is to forget the use of \verb|free()| to empty the used memory. Even more so when a variable is allocated and freed in different functions.\\
+
+In the C-code it is therefore chosen not to use dynamic memory allocation. As a result, no \verb|free()| is necessary and memory leaks are avoided. All arrays containing the station data are declared only once. To be able to use the arrays in multiple C-files, the arrays are defined \verb|extern|. Unnecessarily passing the arrays as a function argument is prevented this way. Defining the length of the arrays is now done during compile time and therefore the length of the arrays cannot be a variable but must be a constant. This constant is chosen such that it can contain the maximum amount of registers that can be read in one request. For example, the maximum amount of registers that can be read from the Victron system using a single function call of \verb|readVictron()| is 46. The length of the predefined array to store is registers is thus 46. 
+
+\subsection{Temperature sensor polling failure}\label{sec:temperature_sensor_failure}
+Although the ODROID can fetch data from the solar panel temperature probes through the ADAM-4015 module, it regularly fails in doing so. A failure in polling the temperature sensors happens in roughly $\frac{1}{3}$rd of the fetches. This problem is unlikely to be caused by the ADAM module, because this can handle a polling rate of 12 per second \cite{adam_polling}. It is unclear if there is a maximum polling rate to the temperature probes, but these probes are most likely analogue and therefore not bound to a maximum polling rate.\\
+
+It is therefore unclear what causes these frequent failures. The functionality is present, however, so data can be read, but it should be inspected more closely in future development if more data is desired.
+%polling failures

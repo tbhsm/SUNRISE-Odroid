@@ -1,0 +1,1 @@
+odroic_cb_victron is een codeblocks-project waarmee het uitlezen van de victron getest kan worden.

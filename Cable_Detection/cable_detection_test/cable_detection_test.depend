@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1465552922 source:/home/jobvanstaveren/Documents/odroid/Cable_Detection/cable_detection_test/main.c
+	<stdio.h>
+	<stdlib.h>
+
+1465561437 source:/home/odroid/Documents/SUNRISE-Odroid/Cable_Detection/cable_detection_test/main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+	<unistd.h>
+	<string.h>
+	<time.h>
+	<wiringPi.h>
+	<wiringPiI2C.h>
+	<wiringSerial.h>
+	<lcd.h>
+
